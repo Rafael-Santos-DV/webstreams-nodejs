@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        .contain {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .design {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 10px;
+            margin: 5px;
+        }
+
+        .design > article {
+            border: 1px solid grey;
+            display: flex;
+            flex-direction: column;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        button {
+            border: none;
+            padding: 20px 30px;
+            color: white;
+            font-size: .8rem;
+            border-radius: .4rem;
+        }
+
+        button:hover {
+            filter: brightness(.9);
+            cursor: pointer;
+        }
+
+        button:nth-of-type(1) {
+            background-color: green;
+        }
+
+        button:nth-of-type(2) {
+            background-color: red;
+        }
+    </style>
+    <title>Stream</title>
+</head>
+<body>
+    <div class="contain">
+        <h1>Stream</h1>
+        <div>
+            <button id="start">start</button>
+            <button id="stop">Stop</button>
+        </div>
+        <div class="design" id="cards"></div>
+    </div>
+    <script src="index.js" type="module"></script>
+</body>
+</html>
